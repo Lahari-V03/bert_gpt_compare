@@ -80,7 +80,6 @@ def main():
 
     training_args = TrainingArguments(
         output_dir=OUTPUT_DIR,
-        overwrite_output_dir=True,
         eval_strategy="no",
         save_strategy="epoch",
         logging_strategy="steps",
