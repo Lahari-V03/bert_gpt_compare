@@ -98,7 +98,7 @@ def main():
         args=training_args,
         train_dataset=tokenized_train,
         eval_dataset=tokenized_test,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         compute_metrics=compute_metrics,
     )
 
