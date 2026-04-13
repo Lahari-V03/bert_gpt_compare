@@ -74,7 +74,7 @@ def main():
     model.config.pad_token_id = tokenizer.pad_token_id
 
     data_collator = DataCollatorForLanguageModeling(
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         mlm=False,  # causal LM, not masked LM
     )
 
@@ -96,7 +96,7 @@ def main():
         model=model,
         args=training_args,
         train_dataset=lm_dataset,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         data_collator=data_collator,
     )
 
