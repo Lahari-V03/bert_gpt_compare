@@ -26,13 +26,14 @@ Decoder (GPT): "Continue this review..." → Text generation
 
 
 ## Project Structure
-src/
-├── data/
-│ └── imdb_loader.py # Loads/preprocesses IMDb dataset
-├── training/
-│ ├── train_bert.py # Fine-tunes DistilBERT for classification
-│ └── train_gpt.py # Fine-tunes DistilGPT2 for generation
-└── demo.py # Loads saved models + runs inference demos
+## Project Structure
+
+| Path | Purpose |
+|------|---------|
+| `src/data/imdb_loader.py` | Loads the IMDb dataset, creates smaller splits for experiments, and prepares text-only data for GPT training. |
+| `src/training/train_bert.py` | Fine-tunes `distilbert-base-uncased` for sentiment classification on IMDb reviews. |
+| `src/training/train_gpt.py` | Fine-tunes `distilgpt2` for causal language modeling on IMDb review text. |
+| `src/demo.py` | Loads the saved models and runs inference demos for both sentiment classification and text generation. |
 
 ## Quick Start
 
