@@ -1,4 +1,4 @@
-# IMDb Transformers: BERT vs GPT Comparison
+# Transformers: BERT vs GPT Comparison
 
 **A beginner-friendly project to understand encoder vs decoder transformers using the same dataset.**
 
